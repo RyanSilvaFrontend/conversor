@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Conversor de Moeda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="converter">
+    <h1>Conversor de Moeda</h1>
+    <div class="input-group">
+      <label for="amount">Valor em BRL:</label>
+      <input type="number" id="amount" min="0" step="0.01">
+    </div>
+    <div class="input-group">
+      <label for="currency">Converter para:</label>
+      <select id="currency">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="CNY">Renminbi Chinês (CNY)</option>
+        <option value="JPY">Iene Japonês (JPY)</option>
+      </select>
+    </div>
+    <button onclick="convertCurrency()">Converter</button>
+    <button onclick="refreshRates()">Atualizar Taxas</button>
+    <div id="result"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
